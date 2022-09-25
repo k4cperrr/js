@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1> Ciag Geometryczny</h1>
+    <label for="n">Podaj n</label><input type="number" id="n">
+    <br><br>
+    <label for="a">Podaj a</label><input type="number" id="a">
+    <br><br>
+    <label for="q">Podaj q</label><input type="number" id="q">
+    <br></br>
+
+    <input type="button" value="Geometryczny" onclick="geometryczny()">
+    <div id="wynik" style="margin-top:20px;"></div>
+    <script>
+        function geometryczny() {
+            var n = document.getElementById("n").value;
+            var a = document.getElementById("a").value;
+            var q = document.getElementById("q").value;
+            var wynik;
+            if (q == 1) {
+                wynik = a * n;
+                document.getElementById("wynik").innerHTML = wynik;
+            }
+            else {
+                wynik = a * ((1 - Math.pow(q, n)) / (1 - q));
+                document.getElementById("wynik").innerHTML = wynik;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
